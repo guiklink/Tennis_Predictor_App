@@ -95,11 +95,11 @@ def predButtonCallBack():
 	if player1.lower() == player2.lower():
 		status += '[Both players have the same name]'
 		playersAreValid = False
-	if not isValidPlayer(player1):
-		status += '[Player 1 is not a valid name]'
+	if not isValidPlayer(player1, tournament):
+		status += '[Player 1 is not a valid name for this tournament]'
 		playersAreValid = False
-	if not isValidPlayer(player2):
-		status += '[Player 2 is not a valid name]'
+	if not isValidPlayer(player2, tournament):
+		status += '[Player 2 is not a valid name for this tournament]'
 		playersAreValid = False
 	if tournament == None:
 		status += '[No tournament was selected]'

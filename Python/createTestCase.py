@@ -134,10 +134,10 @@ def createTrainingInstance(player1_name, player2_name, tournament):
 	return result
 
 
-def isValidPlayer(name):
-	sql = "SELECT COUNT(PLAYER) FROM (SELECT distinct PLAYER1 AS PLAYER FROM ALL_TOURNAMENTS_2011_2015 WHERE PLAYER1 LIKE ? UNION SELECT distinct PLAYER2 AS PLAYER FROM ALL_TOURNAMENTS_2011_2015 WHERE PLAYER2 LIKE ?);"
+def isValidPlayer(name, tournament):
+	sql = "SELECT COUNT(PLAYER) FROM (SELECT distinct PLAYER1 AS PLAYER FROM ALL_TOURNAMENTS_2011_2015 WHERE PLAYER1 LIKE ? AND TOURNAMENT = ? UNION SELECT distinct PLAYER2 AS PLAYER FROM ALL_TOURNAMENTS_2011_2015 WHERE PLAYER2 LIKE ? AND TOURNAMENT = ?);"
 
-	for row in c.execute(sql,[(name), (name)]):
+	for row in c.execute(sql,[(name), (tournament), (name), (tournament)]):
 		n = row[0]
 		if n > 0:
 			return True
