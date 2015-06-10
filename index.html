@@ -56,7 +56,7 @@ Sherif Mostafa (<a href="https://github.com/sherifm" class="user-mention" target
 $ git clone https://github.com/guiklink/Tennis_Predictor_App.git
 $ git checkout master
 </code></pre>
-<p>If you don't have git. Alternativally you can dowload if by clicking on <b><i>Download ZIP</i></b> on the botton left part of the <a href="https://github.com/guiklink/Tennis_Predictor_App">page</a>. This might take a few minutes, since the app will need our database and trees in order to predict.</p>
+<p>If you don't have git. Alternativally you can dowload if by clicking on <b><i>Download ZIP</i></b> on the bottom left part of the <a href="https://github.com/guiklink/Tennis_Predictor_App">page</a>. This might take a few minutes, since the app will need our database and trees in order to predict.</p>
 <p> Now you have to go inside the folder <i>Python</i> and the GUI file <i>tennis_predict_GUI.py</i></p>
 <pre><code>$ cd Python
 $ python tennis_predict_GUI.py
@@ -90,11 +90,22 @@ $ python tennis_predict_GUI.py
 <p>One of the functionalities of the app is to export a graphical representation of the tree. This can be done by writing a path in the path text box and pressing the button <b><i>Export tree to PDF</i></b> (see APP interface section).<br><a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXrogertree.pdf">Tree sample.</a> </p>
 
 <h3>
-<a id="tree-node" class="anchor" href="#tree-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding a Node</h3>
-
+<a id="tree-node-leaf" class="anchor" href="#tree-node-leaf" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding a Leaf Node</h3>
 <img src="https://github.com/guiklink/Tennis_Predictor_App/blob/gh-pages/images/1_node1.png?raw=true">
-<img src="https://github.com/guiklink/Tennis_Predictor_App/blob/gh-pages/images/2_node2.png?raw=true">
+<ol>
+<li><b>Gini</b> stands for impurity and “entropy” for the information gain</li>
+<li>How many <b>Samples</b> of the training data made to this leaf</li>
+<li>What percentage of the samples were able to been classified</li>
+</ol>
 
+<h3>
+<a id="tree-node" class="anchor" href="#tree-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding a Parent Node</h3>
+<img src="https://github.com/guiklink/Tennis_Predictor_App/blob/gh-pages/images/2_node2.png?raw=true">
+<ol>
+<li><b>X[18] is the attribute which this node split and the <=19.0000 is the criteria. A list with all attributes index is provided here.</li>
+<li><b>Gini</b> stands for impurity and “entropy” for the information gain</li>
+<li>How many <b>Samples</b> of the training data made to this leaf</li>
+</ol>
 
 
 
