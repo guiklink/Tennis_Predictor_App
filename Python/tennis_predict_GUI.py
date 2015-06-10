@@ -14,8 +14,8 @@ def exportPlayerDataCSV():
 
 	# Load the avg weighted data for each player
 	if tree == None:
-		msg = 'You need to predict at least once before exportind a tree.'
-		labelExportStatus.configure(bg = "red", test = msg)
+		msg = "You need to predict at least once before exporting players' data."
+		labelExportStatus.configure(bg = "red", text = msg)
 	else:
 		dataP1 = retrievePlayerData(player1, 1, tournament)
 		dataP2 = retrievePlayerData(player2, 2, tournament)
@@ -49,6 +49,8 @@ def exportPlayerDataCSV():
 
 		file.write('Player1,Player2\n' + player1 + ',' + player2)		
 		file.close() 
+		msg = "Players' data exported in a .CSV!"
+		labelExportStatus.configure(bg = "green", text = msg)
 		
 
 
@@ -56,10 +58,12 @@ def exportTreePDF():
 	global tree
 	path = textBoxPath.get()
 	if tree == None:
-		msg = 'You need to predict at least once before exportind a tree.'
-		labelExportStatus.configure(bg = "red", test = msg)
+		msg = 'You need to predict at least once before exporting a tree.'
+		labelExportStatus.configure(bg = "red", text = msg)
 	else:
 		tree.printTreePDF(path + '.pdf')
+		msg = "Tree exported in a .PDF!"
+		labelExportStatus.configure(bg = "green", text = msg)
 
 def predict(player1, player2):
 	global tournament, tree
