@@ -50,14 +50,15 @@ Sherif Mostafa (<a href="https://github.com/sherifm" class="user-mention" target
 
 <h2>
 <a id="run-app" class="anchor" href="#run-app" aria-hidden="true"><span class="octicon octicon-link"></span></a>How to Run the App</h2>
+<p>Runnin this app will require you to have a running <a href="https://wiki.python.org/moin/BeginnersGuide/Download">installation of python</a> as well as <a href="http://scikit-learn.org/stable/install.html">sci-kit-learn</a>.</p>
 
-<p>Running the prediction add from source is very simple. First, if you still havent, clone our repository:</p>
+<p>Running the prediction app from source is very simple. First, clone our repository if you have not done that yet:</p>
 <pre><code>$ cd the_directory_to_clone
 $ git clone https://github.com/guiklink/Tennis_Predictor_App.git
 $ git checkout master
 </code></pre>
-<p>If you don't have git. Alternativally you can dowload if by clicking on <b><i>Download ZIP</i></b> on the bottom left part of the <a href="https://github.com/guiklink/Tennis_Predictor_App">page</a>. This might take a few minutes, since the app will need our database and trees in order to predict.</p>
-<p> Now you have to go inside the folder <i>Python</i> and the GUI file <i>tennis_predict_GUI.py</i></p>
+<p>Alternativally, if you don't have git you can dowload it by clicking on <b><i>Download ZIP</i></b> on the bottom left of this <a href="https://github.com/guiklink/Tennis_Predictor_App">page</a>. This might take a few minutes, since the app will need our database and trees in order forecast.</p>
+<p> Now you have to go inside the folder <i>Python</i> and laungh the GUI file <i>tennis_predict_GUI.py</i></p>
 <pre><code>$ cd Python
 $ python tennis_predict_GUI.py
 </code></pre>
@@ -69,42 +70,42 @@ $ python tennis_predict_GUI.py
 <br><br>
 <p>
 <ol>
-<li>Enter the name of player 1*</li>
-<li>Enter the name of player 2*</li>
-<li>Predict Button: click to predict the winner of the match</li>
-<li>Select the tournament of the prediction</li>
-<li>Prediction Status label: this field will let you know if there's a problem with the prediction</li>
-<li>Returns the prediction</li>
-<li>Use this box to write the path in which your output will be saved**</li>
-<li>Export Player Data Button: export the data that was used for each player to create the test instance as a CSV</li>
-<li>Export Tree to PDF Button: export a image representation of the tree that was used for the prediction as a PDF</li>
-<li>Status of Exporting: this field let you know if the file was exported</li>
+<li>Enter the name of player 1*.</li>
+<li>Enter the name of player 2*.</li>
+<li>Predict Button: Click to predict the winner of the match.</li>
+<li>Select the tournament for the prediction.</li>
+<li>Prediction status label: I.e. this field will let you know if there's a problem with the prediction.</li>
+<li>Returns the prediction.</li>
+<li>Use this box to write the path in which your output will be saved**.</li>
+<li>Export Player Data button: Export the data that was used for each player to create the test instance as a CSV.</li>
+<li>Export Tree to PDF button: Export a graph representation of the learned tree that was used for prediction in .pdf .</li>
+<li>Status of Exporting: This field notifies you about the export progress.</li>
 </ol>
 
 <b>*</b> You must enter a valid name for a player, otherwise the <b><i>Prediction Status label</i></b> will not let you perform a prediction. A list of the available players can be found <a href="http://example.com">here (set the link address)</a><br>
-<b>**</b> The last part of the path will be your file name. <b>Do not</b> finish it up with the format (e.g. .pdf or .csv), the app will handle this automatically. An tree example can be seem <a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXrogertree.pdf">here</a>. Players' data example can be seem <a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXroger.csv">here</a>.<br>
+<b>**</b> The last part of the path will be your file name. <b>Do not</b> append it with the format (e.g. .pdf or .csv), the app will handle this internally. A tree example can be seen <a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXrogertree.pdf">here</a>. An example of a player's data can be viewed <a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXroger.csv">here</a>.<br>
 </p>
 
 <h2>
 <a id="tree-reading" class="anchor" href="#tree-reading" aria-hidden="true"><span class="octicon octicon-link"></span></a>Tree Gaphical Representation</h2>
-<p>One of the functionalities of the app is to export a graphical representation of the tree. This can be done by writing a path in the path text box and pressing the button <b><i>Export tree to PDF</i></b> (see APP interface section).<br><a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXrogertree.pdf">Tree sample.</a> </p>
+<p>One of the apps functionalities is to export a graphical representation of the tree. This can be done by writing a path in the path text box and pressing the button <b><i>Export Tree To PDF</i></b> (see APP interface section).<br><a href="https://github.com/guiklink/Tennis_Predictor_App/blob/master/Output/rafaXrogertree.pdf">Tree sample.</a> </p>
 
 <h3>
 <a id="tree-node-leaf" class="anchor" href="#tree-node-leaf" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding a Leaf Node</h3>
 <img src="https://github.com/guiklink/Tennis_Predictor_App/blob/gh-pages/images/1_node1.png?raw=true">
 <ol>
-<li><b>Gini</b> stands for impurity and “entropy” for the information gain</li>
-<li>How many <b>Samples</b> of the training data made to this leaf</li>
-<li>What percentage of the samples were able to been classified</li>
+<li><b>Gini</b> represents the impurity or “entropy” of the node</li>
+<li>How many <b>Samples</b> of the training reached this leaf</li>
+<li>What percentage of the samples were uniquely classified</li>
 </ol>
 
 <h3>
 <a id="tree-node" class="anchor" href="#tree-node" aria-hidden="true"><span class="octicon octicon-link"></span></a>Understanding a Parent Node</h3>
 <img src="https://github.com/guiklink/Tennis_Predictor_App/blob/gh-pages/images/2_node2.png?raw=true">
 <ol>
-<li><b>X[18] is the attribute which this node split and the <=19.0000 is the criteria. A list with all attributes index is provided here.</li>
+<li><b>X[18]</b> is the attribute which this node split and the <b><=19.0000</b> is the value. A list with all attributes index is provided here.</li>
 <li><b>Gini</b> stands for impurity and “entropy” for the information gain</li>
-<li>How many <b>Samples</b> of the training data made to this leaf</li>
+<li>How many <b>samples</b> of the training data made to this leaf</li>
 </ol>
 
 
